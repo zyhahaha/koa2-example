@@ -6,4 +6,10 @@ router.get('/', async ctx => {
     ctx.body = content;
 })
 
+router.post('/api', async ctx => {
+    console.log(ctx.request.body);
+    let postData = ctx.request.body;
+    ctx.body = postData;
+})
+
 module.exports = router;
