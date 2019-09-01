@@ -1,0 +1,26 @@
+{
+  "name": "koa2-example",
+  "version": "0.0.1",
+  "description": "koa2 example",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zyhahaha/koa2-example.git"
+  },
+  "keywords": [
+    "koa2",
+    "nodejs"
+  ],
+  "author": "zhaoyang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zyhahaha/koa2-example/issues"
+  },
+  "homepage": "https://github.com/zyhahaha/koa2-example#readme",
+  "devDependencies": {
+    "koa": "^2.8.1"
+  }
+}
