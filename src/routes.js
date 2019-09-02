@@ -8,7 +8,6 @@ router.get('/', async ctx => {
 })
 
 router.post('/api', async ctx => {
-    console.log(ctx.request.body);
     let postData = ctx.request.body;
     ctx.body = postData;
 })
@@ -16,7 +15,6 @@ router.post('/api', async ctx => {
 router.post('/api/sql', async ctx => {
   let sql = `SELECT * FROM person;`;
   await db.query(sql).then(res => {
-    console.log(res);
     ctx.body = res;
   })
 })
