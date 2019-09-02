@@ -1,6 +1,6 @@
 const config = {
   // 启动端口
-  port: 8088,
+  port: 8888,
   // 数据库配置
   database: {
     host: '47.96.234.53',
