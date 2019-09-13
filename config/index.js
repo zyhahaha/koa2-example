@@ -3,9 +3,9 @@ const config = {
   port: 8888,
   // 数据库配置
   database: {
-    host: '47.96.234.53',
+    host: '129.204.128.13',
     user: 'root',
-    password: 'basepassword',
+    password: '123456',
     database: 'test',
     port: 3306,
     multipleStatements: true // 允许多条sql同时执行

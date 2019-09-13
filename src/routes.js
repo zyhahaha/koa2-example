@@ -19,4 +19,12 @@ router.post('/api/sql', async ctx => {
   })
 })
 
+// cv
+router.post('/cv/query', async ctx => {
+  let sql = `SELECT * FROM person;`;
+  await db.query(sql).then(res => {
+    ctx.body = res;
+  })
+})
+
 module.exports = router;
