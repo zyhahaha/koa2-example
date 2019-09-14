@@ -37,8 +37,14 @@ router.get('/cv/message/query', async ctx => {
   })
 })
 
+// 消息队列 RabbitMQ
+
 // checkout
 function checkoutParams(params){
+
+}
+// SQL注入
+function checkoutSql(){
 
 }
 
