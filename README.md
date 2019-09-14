@@ -11,7 +11,7 @@ koa2 example
 ### 微服务
 1. ResultFul API
 2. 消息队列RabbitMQ
-3. 服务发现Consul
+3. 服务发现Consul（在这个项目中服务较少，没有使用的必要）
 4. 熔断机制
 
 ### web安全
