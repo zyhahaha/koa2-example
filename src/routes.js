@@ -13,18 +13,33 @@ router.post('/api', async ctx => {
 })
 
 router.post('/api/sql', async ctx => {
-  let sql = `SELECT * FROM person;`;
+  let sql = `SELECT * FROM db_account;`;
   await db.query(sql).then(res => {
     ctx.body = res;
   })
 })
 
 // cv
-router.post('/cv/query', async ctx => {
-  let sql = `SELECT * FROM person;`;
+router.post('/cv/message/create', async ctx => {
+  let postData = ctx.request.body;
+  let name = postData.name;
+  let message = postData.message;
+  if (!name || !message) return '参数不正确';
+  let sql = `INSERT INTO db_message (name, message) VALUES ("${name}", "${message}");`;
   await db.query(sql).then(res => {
     ctx.body = res;
   })
 })
+router.get('/cv/message/query', async ctx => {
+  let sql = `SELECT * FROM db_message;`;
+  await db.query(sql).then(res => {
+    ctx.body = res;
+  })
+})
+
+// checkout
+function checkoutParams(params){
+
+}
 
 module.exports = router;
