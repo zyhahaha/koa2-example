@@ -17,4 +17,4 @@ koa2 example
 ### web安全
 1. CSRF
 2. XSS
-3. SQL注入
+3. SQL注入 （sql语句不要使用字符串拼接，要使用占位符?，内部会自动调用connection.escape方法对参数进行编码）
