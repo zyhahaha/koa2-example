@@ -3,7 +3,7 @@ const db = require('./db');
 
 let router = new Router();
 router.get('/', async ctx => {
-    let content = `<h2>hello home</h2>`;
+    let content = '<h2>hello home</h2>';
     ctx.body = content;
 })
 
@@ -13,7 +13,7 @@ router.post('/api', async ctx => {
 })
 
 router.post('/api/sql', async ctx => {
-  let sql = `SELECT * FROM db_account;`;
+  let sql = 'SELECT * FROM db_account;';
   await db.query(sql).then(res => {
     ctx.body = res;
   })
@@ -25,13 +25,13 @@ router.post('/cv/message/create', async ctx => {
   let name = postData.name;
   let message = postData.message;
   if (!name || !message) return '参数不正确';
-  let sql = `INSERT INTO db_message (name, message) VALUES ("${name}", "${message}");`;
-  await db.query(sql).then(res => {
+  let sql = 'INSERT INTO db_message (name, message) VALUES (?, ?);';
+  await db.query(sql, [name, message]).then(res => {
     ctx.body = res;
   })
 })
 router.get('/cv/message/query', async ctx => {
-  let sql = `SELECT * FROM db_message;`;
+  let sql = 'SELECT * FROM db_message;';
   await db.query(sql).then(res => {
     ctx.body = res;
   })

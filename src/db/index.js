@@ -8,7 +8,7 @@ let query = (sql, values) => {
       connection.query(sql, values, (err, rows) => {
         if(err) return reject(err);
         resolve(rows);
-        connection.end();
+        connection.release();
       })
     })
   })
