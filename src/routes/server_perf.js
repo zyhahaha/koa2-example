@@ -20,7 +20,7 @@ router.post('/cv/message/create', async ctx => {
 
 // query
 router.get('/cv/message/query', async ctx => {
-  let sql = 'SELECT * FROM db_message;';
+  let sql = `SELECT * FROM ${SERVER_PERF_DB};`;
   await db.query(sql).then(res => {
     ctx.body = res;
   })
