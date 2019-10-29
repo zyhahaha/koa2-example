@@ -1,6 +1,9 @@
 # koa2-example
 koa2 example
 
+### 第三方包
+1.node-schedule （nodejs定时任务）
+
 ### 数据库
 1. mysql
 2. redis

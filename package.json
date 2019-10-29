@@ -20,10 +20,11 @@
     "url": "https://github.com/zyhahaha/koa2-example/issues"
   },
   "homepage": "https://github.com/zyhahaha/koa2-example#readme",
-  "devDependencies": {
+  "dependencies": {
     "koa": "^2.8.1",
     "koa-bodyparser": "^4.2.1",
     "koa-router": "^7.4.0",
-    "mysql": "^2.17.1"
+    "mysql": "^2.17.1",
+    "node-schedule": "^1.3.2"
   }
 }
