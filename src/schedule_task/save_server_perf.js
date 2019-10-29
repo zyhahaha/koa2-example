@@ -21,7 +21,6 @@ function getIp() {
 }
 
 function insertServerPerfData() {
-  
   // cpu
   let loadAvg15 = os.loadavg()[3]; // 最近15分钟的负载
   // 内存
@@ -41,8 +40,8 @@ function insertServerPerfData() {
 }
 
 function saveServerPerfTask() {
-  insertServerPerfData();
-  schedule.scheduleJob({second: 10}, function () {
+  schedule.scheduleJob({second: [15, 30, 45]}, function () {
+    insertServerPerfData();
     console.log(`saveServerPerfTask: ${Date.now()}`);
   });
 }
