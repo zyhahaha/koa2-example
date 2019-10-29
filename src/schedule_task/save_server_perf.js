@@ -40,7 +40,7 @@ function insertServerPerfData() {
 }
 
 function saveServerPerfTask() {
-  schedule.scheduleJob({second: [15, 30, 45]}, function () {
+  schedule.scheduleJob({minute : [15, 30, 45]}, function () {
     insertServerPerfData();
     console.log(`saveServerPerfTask: ${Date.now()}`);
   });
