@@ -5,7 +5,7 @@ const SERVER_PERF_DB = 'server_perf';
 let router = new Router();
 
 // create
-router.post('/cv/message/create', async ctx => {
+router.post('/server/perf/create', async ctx => {
   let postData = ctx.request.body;
   let server_ip = postData.server_ip;
   let cpu_perf = postData.cpu_perf;
@@ -19,7 +19,7 @@ router.post('/cv/message/create', async ctx => {
 })
 
 // query
-router.get('/cv/message/query', async ctx => {
+router.get('/server/perf/query', async ctx => {
   let sql = `SELECT * FROM ${SERVER_PERF_DB};`;
   await db.query(sql).then(res => {
     ctx.body = res;
