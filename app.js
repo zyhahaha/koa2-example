@@ -17,4 +17,4 @@ app.listen(config.port, () => {
 });
 
 // 注入其它任务
-scheduleTask.saveServerPerfTask(); // 收集性能定时任务
+// scheduleTask.saveServerPerfTask(); // 收集性能定时任务
