@@ -5,7 +5,7 @@ const config = {
   database: {
     host: '47.96.234.53',
     user: 'root',
-    password: '854275944618',
+    password: '',
     database: 'koa_test',
     port: 3306,
     multipleStatements: true // 允许多条sql同时执行
