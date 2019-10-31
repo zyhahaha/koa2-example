@@ -1,6 +1,6 @@
 const Router = require('koa-router');
 const db = require('../db');
-const DB_TABLE = 'server_perf';
+const DB_TABLE = 'bt_info';
 
 let router = new Router();
 
@@ -12,7 +12,9 @@ router.post('/bt/create', async ctx => {
   let name = postData.name || '';
   let tim = Date.now();
   // insert
-  if (!hash) return '参数不正确';
+  if (!hash) return ctx.body = {
+    code: 500
+  };
   let sql = `INSERT INTO ${DB_TABLE} (hash, tim) VALUES (?, ?);`;
   await db.query(sql, [hash, tim]).then(res => {
     ctx.body = res;
