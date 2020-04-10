@@ -3,8 +3,8 @@ const config = {
   port: 8888,
   // 数据库配置
   database: {
-    host: '180.76.103.151',
-    user: 'zyhahaha',
+    host: '106.13.238.252',
+    user: 'root',
     password: 'zy@980355088',
     database: 'koa_test',
     port: 3306,
