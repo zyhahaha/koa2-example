@@ -1,8 +1,11 @@
 # koa2-example
-koa2 的项目模板
+自用koa2项目模板，支持服务的基础功能，可在模板上进行拓展
 
 ### 第三方包
-1.node-schedule （nodejs定时任务）
+1. koa-router （url路由管理）
+2. koa-bodyparser （http请求体解析）
+3. node-schedule （nodejs定时任务）
+4. mysql （mysql数据库的操作）
 
 ### 数据库
 1. mysql
