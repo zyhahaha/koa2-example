@@ -1,5 +1,5 @@
 const Router = require('koa-router');
-const db = require('../db');
+const mysqlDb = require('../db/mysql');
 const DB_TABLE = 'bt_info';
 
 let router = new Router();
@@ -16,7 +16,7 @@ router.post('/bt/create', async ctx => {
     code: 500
   };
   let sql = `INSERT INTO ${DB_TABLE} (hash, tim) VALUES (?, ?);`;
-  await db.query(sql, [hash, tim]).then(res => {
+  await mysqlDb.query(sql, [hash, tim]).then(res => {
     ctx.body = res;
   })
 })
@@ -24,7 +24,7 @@ router.post('/bt/create', async ctx => {
 // query
 router.get('/bt/query', async ctx => {
   let sql = `SELECT * FROM ${DB_TABLE};`;
-  await db.query(sql).then(res => {
+  await mysqlDb.query(sql).then(res => {
     ctx.body = res;
   })
 })

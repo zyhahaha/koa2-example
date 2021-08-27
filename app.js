@@ -6,12 +6,19 @@ const config = require('./config');
 const app = new Koa();
 
 app.use(bodyParser());
-app
-  .use(require('./src/routes/bt.js').routes())
+
+// mysql example
+// app.use(require('./src/routes/mysql-example.js').routes())
+
+// mongodb example
+// app.use(require('./src/routes/mongodb-example.js').routes())
+
+// lowdb example
+// app.use(require('./src/routes/lowdb-example.js').routes())
 
 app.listen(config.port, () => {
     console.log(`http://localhost:${config.port}`);
 });
 
-// run task
+// 计划任务 example
 // scheduleTask.saveServerPerfTask();
