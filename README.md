@@ -1,21 +1,13 @@
 # koa2-example
-koa2 example
+koa2 的项目模板
 
 ### 第三方包
 1.node-schedule （nodejs定时任务）
 
 ### 数据库
 1. mysql
-2. redis
-
-### 功能点
-1. 微信公众号和微信小程序开发
-
-### 微服务
-1. ResultFul API
-2. 消息队列RabbitMQ
-3. 服务发现Consul（在这个项目中服务较少，没有使用的必要）
-4. 熔断机制
+2. mongodb
+3. redis
 
 ### web安全
 1. CSRF
