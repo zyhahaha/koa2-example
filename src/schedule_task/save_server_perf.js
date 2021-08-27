@@ -1,6 +1,6 @@
 const os = require('os');
 const Router = require('koa-router');
-const db = require('../db');
+const db = require('../db/mysql');
 const SERVER_PERF_DB = 'server_perf';
 const LENGTH = os.cpus().length;
 
