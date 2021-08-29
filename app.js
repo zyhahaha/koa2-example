@@ -8,13 +8,13 @@ const app = new Koa();
 app.use(bodyParser());
 
 // mysql example
-// app.use(require('./src/routes/mysql-example.js').routes())
+// app.use(require('./src/routes/example/mysql-example.js').routes())
 
 // mongodb example
-// app.use(require('./src/routes/mongodb-example.js').routes())
+// app.use(require('./src/routes/example/mongodb-example.js').routes())
 
 // lowdb example
-app.use(require('./src/routes/lowdb-example.js').routes())
+app.use(require('./src/routes/example/lowdb-example.js').routes())
 
 app.listen(config.port, () => {
     console.log(`http://localhost:${config.port}`);
