@@ -14,7 +14,10 @@ app.use(bodyParser());
 // app.use(require('./src/routes/example/mongodb-example.js').routes())
 
 // lowdb example
-app.use(require('./src/routes/example/lowdb-example.js').routes())
+// app.use(require('./src/routes/example/lowdb-example.js').routes())
+
+// report api
+app.use(require('./src/routes/web-designer/report.js').routes())
 
 app.listen(config.port, () => {
     console.log(`http://localhost:${config.port}`);
