@@ -1,6 +1,6 @@
 const { Low, JSONFile } = require('../../utils/lowdb/index.js')
 
-const file = new JSONFile('./database_cache/db.json')
+const file = new JSONFile('./_cache/db.json')
 const db = new Low(file)
 
 async function test() {
@@ -15,7 +15,7 @@ async function test() {
 
     // Write db.data content to db.json
     await db.write()
-    }
+}
 test()
 
 module.exports = db
