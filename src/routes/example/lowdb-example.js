@@ -2,25 +2,35 @@ const Router = require('koa-router');
 const lowDB = require('../../db/lowdb');
 const DB_TABLE = 'example_table';
 
-let router = new Router();
+const dbInstance = new lowDB(DB_TABLE)
+const router = new Router();
 
 // create
 router.post('/example/create', async ctx => {
   let postData = ctx.request.body;
   // params
-  let hash = postData.hash;
+  let id = Date.now();
   let name = postData.name || '';
-  let tim = Date.now();
+  let data = postData.data || {};
   // insert
+  let resData = await dbInstance.insert({
+    id,
+    name,
+    data
+  })
+
   ctx.body = {
-    code: 500
+    code: 200,
+    data: resData
   };
 })
 
 // query
 router.get('/example/query', async ctx => {
+  let data = await dbInstance.query()
   ctx.body = {
-    code: 500
+    code: 200,
+    data
   };
 })
 
