@@ -1,5 +1,5 @@
 const Router = require('koa-router');
-const liteDB = require('../../db/litedb');
+const liteDB = require(global._DirRoot + '/src/db/litedb');
 const DB_TABLE = 'example_table';
 
 const dbInstance = new liteDB(DB_TABLE)

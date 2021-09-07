@@ -1,5 +1,5 @@
 const Router = require('koa-router');
-const mongoDB = require('../../db/mongodb');
+const mongoDB = require(global._DirRoot + '/src/db/mongodb');
 const DB_TABLE = 'example_table';
 
 let router = new Router();

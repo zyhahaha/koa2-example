@@ -1,8 +1,8 @@
-const { Low, JSONFile } = require('../../utils/litedb/index.js')
+const { Low, JSONFile } = require(global._DirRoot + '/src/utils/litedb/index.js')
 
 class LiteDB {
     constructor(tableName){
-        const file = new JSONFile(`./_cache/${tableName}.json`)
+        const file = new JSONFile(`${global._DirRoot}/_cache/${tableName}.json`)
         this.dbInstance = new Low(file)
     }
     async insert(data){

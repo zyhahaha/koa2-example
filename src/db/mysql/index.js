@@ -1,5 +1,5 @@
 let mysql = require('mysql');
-const config = require('../../../config');
+const config = require(global._DirRoot + '/config');
 let pool = mysql.createPool(config.database);
 let query = (sql, values) => {
   return new Promise((resolve, reject) => {

@@ -1,5 +1,5 @@
 const Router = require('koa-router');
-const mysqlDb = require('../../db/mysql');
+const mysqlDb = require(global._DirRoot + '/src/db/mysql');
 const DB_TABLE = 'bt_info';
 
 let router = new Router();
