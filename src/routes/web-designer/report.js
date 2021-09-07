@@ -1,8 +1,8 @@
 const Router = require('koa-router');
-const lowDB = require('../../db/lowdb');
+const liteDB = require('../../db/litedb');
 const DB_TABLE = 'example_table';
 
-const dbInstance = new lowDB(DB_TABLE)
+const dbInstance = new liteDB(DB_TABLE)
 const router = new Router();
 
 // add

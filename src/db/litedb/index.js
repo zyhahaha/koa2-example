@@ -1,6 +1,6 @@
-const { Low, JSONFile } = require('../../utils/lowdb/index.js')
+const { Low, JSONFile } = require('../../utils/litedb/index.js')
 
-class LowDb {
+class LiteDB {
     constructor(tableName){
         const file = new JSONFile(`./_cache/${tableName}.json`)
         this.dbInstance = new Low(file)
@@ -18,4 +18,4 @@ class LowDb {
     }
 }
 
-module.exports = LowDb
+module.exports = LiteDB

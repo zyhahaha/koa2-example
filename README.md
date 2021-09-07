@@ -7,7 +7,7 @@
 3. node-schedule （nodejs定时任务）
 4. mysql （mysql数据库操作）
 5. mongodb （mongodb数据库操作）
-6. lowdb （数据在本地存储和读取，快捷使用不用配置数据库）
+6. litedb （数据在本地存储和读取，快捷使用不用配置数据库）
 7. socket.io （websocket功能）
 
 ### 数据库
